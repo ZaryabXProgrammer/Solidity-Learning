@@ -19,6 +19,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -73,11 +86,11 @@
 	},
 	"sources": {
 		"contracts/Calculator.sol": {
-			"keccak256": "0xb6b8231243e8a02c8079f7d3678ffcab16c30ae90b7d1adace008f3ebc8d6574",
+			"keccak256": "0x4f39bcaeb7e233f6a59df7f3a8a3fc4d4178616d5c6ebd1d5d92181bcc855c93",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7ac60cfbc2229f9fe1261cdc498d45db1e629c0ae501b2041102d842fd0ca2a5",
-				"dweb:/ipfs/QmQe41b3VHexiWbHMoDShx8k9uvPrvcWK9Vr7frvYJbw2S"
+				"bzz-raw://d22f62964a440a88e6adf06095ad51c6ef6d937968701ebd2cfc4d423219796a",
+				"dweb:/ipfs/QmR47s481gAK64hzazbewBNb71NhRkuPzQPQojTYf7dG6k"
 			]
 		}
 	},
