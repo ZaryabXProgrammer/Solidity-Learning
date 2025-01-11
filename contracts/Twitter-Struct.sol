@@ -4,7 +4,7 @@ pragma solidity ^0.8.26;
 
 contract Twitter {
 
-    uint16 constant MAX_TWEET_LENGTH = 280;
+    uint16 public MAX_TWEET_LENGTH = 280;
 
     // Define a struct called 'Tweet' to store information about each tweet.
     struct Tweet {
@@ -17,6 +17,21 @@ contract Twitter {
     // Create a mapping that links each address (user) to an array of tweets.
     // The 'tweets' mapping stores multiple tweets for each address.
     mapping(address => Tweet[]) public tweets;
+
+    address public owner;
+
+    constructor(){
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner(){
+        require(msg.sender == owner, "YOU ARE NOT THE OWNER");
+        _;
+    }
+
+    function changeTweetLength(uint16 newTweetLength ) public onlyOwner {
+        MAX_TWEET_LENGTH = newTweetLength;
+    }
 
     // Function to create a new tweet.
     function createTweet(string memory _tweet) public {

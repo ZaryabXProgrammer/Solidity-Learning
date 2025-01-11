@@ -6,6 +6,37 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "MAX_TWEET_LENGTH",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "newTweetLength",
+						"type": "uint16"
+					}
+				],
+				"name": "changeTweetLength",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -30,6 +61,11 @@
 				"outputs": [
 					{
 						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
 							{
 								"internalType": "address",
 								"name": "author",
@@ -72,6 +108,11 @@
 					{
 						"components": [
 							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
 								"internalType": "address",
 								"name": "author",
 								"type": "address"
@@ -104,6 +145,37 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "likeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -115,6 +187,11 @@
 				],
 				"name": "tweets",
 				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
 					{
 						"internalType": "address",
 						"name": "author",
@@ -138,6 +215,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "unlikeTweet",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -153,7 +248,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Struct.sol": "Twitter"
+			"contracts/Twitter-Add-Like.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -167,12 +262,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-Struct.sol": {
-			"keccak256": "0x3d5e2d48baa65a80f6f711d01bd78b36419ff4a06afd47f4c8eaa447d3ab022a",
+		"contracts/Twitter-Add-Like.sol": {
+			"keccak256": "0xd7262794b10203f4b859d9adca8070617d96471e1f92ba529a70c3686716df97",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://efa801e743fabc39dbbdbd90dff7bf7807d4e81d9ae83939af901ac0f9da2bba",
-				"dweb:/ipfs/QmUdA6UEWKkJdFcjCkwCpRC9Bbo8sg8C4ou7aXN2uUs5Yq"
+				"bzz-raw://005ca32d4335cd4a1c5a35edb69b1bea598ca9fbd562e3090f74135514a1062c",
+				"dweb:/ipfs/QmRTUuQbVKp1fkQWL95dNpLR3fuH6cAE7AnjacmQfAcXrR"
 			]
 		}
 	},
