@@ -191,6 +191,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_author",
+						"type": "address"
+					}
+				],
+				"name": "getTotalLikes",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "totalLikes",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_i",
 						"type": "uint256"
@@ -341,7 +360,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-AddEvent.sol": "Twitter"
+			"contracts/Twitter-GetTotalLikes.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -355,12 +374,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-AddEvent.sol": {
-			"keccak256": "0x6e6324fed4cd1ce450b6af3da475621f1e24d0f86094c202eecd34316ab9dd73",
+		"contracts/Twitter-GetTotalLikes.sol": {
+			"keccak256": "0xedd326043452e7c871c5507f2b5d448367108e05e7aa48dbec66e5298d48d3d5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://941a9bbab644c2d638cb30bac7b0437bbe3160edc17ce0235bfa8a9bed990969",
-				"dweb:/ipfs/QmczWnAvRbvdEDVKznzgCFUWK6jx26BC5nGrpc11BrdGBY"
+				"bzz-raw://7cf054a3423e00a9d676befda0c329f33b6dfd89a9ae0c4327665e501759518b",
+				"dweb:/ipfs/QmWAWMyL6gR1miTd9MfZQxsTAjGnLonLZE9hPuSN6hkLvk"
 			]
 		}
 	},
