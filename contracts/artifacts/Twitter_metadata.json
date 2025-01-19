@@ -11,6 +11,47 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -191,25 +232,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_author",
-						"type": "address"
-					}
-				],
-				"name": "getTotalLikes",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "totalLikes",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "uint256",
 						"name": "_i",
 						"type": "uint256"
@@ -285,6 +307,26 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -348,8 +390,30 @@
 			}
 		],
 		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -360,7 +424,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-GetTotalLikes.sol": "Twitter"
+			"contracts/Twitter-Inheritance-Solution.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -374,12 +438,28 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter-GetTotalLikes.sol": {
-			"keccak256": "0xedd326043452e7c871c5507f2b5d448367108e05e7aa48dbec66e5298d48d3d5",
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7cf054a3423e00a9d676befda0c329f33b6dfd89a9ae0c4327665e501759518b",
-				"dweb:/ipfs/QmWAWMyL6gR1miTd9MfZQxsTAjGnLonLZE9hPuSN6hkLvk"
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		},
+		"contracts/Twitter-Inheritance-Solution.sol": {
+			"keccak256": "0x78eb2ce3e7d11060e5bee7db692a48aa4b3959cfbdcbf8b3ec76e411f718adef",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3972885102fcebc26f4fc62c17a99dbd3220b6fe79883e1380250e4574cd5027",
+				"dweb:/ipfs/QmPKsbRYQeDotmmK6tBLYJ2B6SoTkxkgnKmSdcy7yoerUY"
 			]
 		}
 	},
