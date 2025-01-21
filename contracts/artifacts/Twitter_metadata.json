@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_profileContract",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -424,7 +430,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter-Inheritance-Solution.sol": "Twitter"
+			"contracts/Twitter-Interaction-Main.sol": "Twitter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -454,12 +460,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/Twitter-Inheritance-Solution.sol": {
-			"keccak256": "0x78eb2ce3e7d11060e5bee7db692a48aa4b3959cfbdcbf8b3ec76e411f718adef",
+		"contracts/Twitter-Interaction-Main.sol": {
+			"keccak256": "0xc564153d461aa92c29cf15439f957d2365120044aab920581d32968c80119ac8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3972885102fcebc26f4fc62c17a99dbd3220b6fe79883e1380250e4574cd5027",
-				"dweb:/ipfs/QmPKsbRYQeDotmmK6tBLYJ2B6SoTkxkgnKmSdcy7yoerUY"
+				"bzz-raw://6a8b5833b8e99e61d0e0a1610fb1aed9963f79e5efa651c2c76a423dc416a83f",
+				"dweb:/ipfs/QmYV68SQbDFNcrgRkTtHFgMRwuZpZ8i2hbEQH4pfegegC6"
 			]
 		}
 	},
